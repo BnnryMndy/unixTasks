@@ -1,0 +1,35 @@
+par=$#
+x=3
+sum=0
+if [ $par = 1 ]
+then
+	mass=$(cat file2 | awk '{print $0}')
+	case $1 in
+	1)
+		for i in $mass
+		do
+			ix=$(expr $i "*" $x)
+			echo $ix
+		done
+		;;
+	2)
+		for i in $mass
+		do
+			ix=$(expr $i "*" $x)
+			echo "$i, $ix"
+		done
+		;;
+	3)
+		for i in $mass
+		do
+			sum=$(expr $i "+" $sum)
+		done
+		echo $sum
+		;;
+	*)
+		echo "Not valid command"
+		;;
+	esac
+else
+	echo "Only 1 parametr"
+fi

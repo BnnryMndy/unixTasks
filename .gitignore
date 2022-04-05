@@ -1,0 +1,6 @@
+.vscode
+*.json
+*.out
+**.jpg
+*.jpeg
+*.zip
